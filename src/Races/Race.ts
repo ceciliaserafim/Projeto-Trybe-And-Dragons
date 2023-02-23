@@ -1,13 +1,27 @@
 abstract class Race {
-  private name: string;
-  private dexterity: number;
+  private _name: string;
+  private _dexterity: number;
 
-constructor(name: string, dexterity: number;) {
-  this.name = name,
-  this.dexterity = dexterity
+  constructor(name: string, dexterity: number) {
+    this._name = name;
+    this._dexterity = dexterity;
   }
 
-  createdRacesInstances
+  get name(): string {
+    return this.name;
+  }
+
+  get dexterity(): number {
+    return this._dexterity;
+  }
+
+  set dexterity(value: number) {
+    this._dexterity = value;
+  }
+
+  // createdRacesInstances(): number {
+
+  // };
 }
 
 export default Race;
