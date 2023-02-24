@@ -18,7 +18,7 @@ abstract class Race {
   set dexterity(value: number) {
     this._dexterity = value;
   }
-
+  // Fazer os 2 métodos
   // createdRacesInstances(): number {
 
   // };
