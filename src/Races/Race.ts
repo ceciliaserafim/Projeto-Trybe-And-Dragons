@@ -15,13 +15,11 @@ abstract class Race {
     return this._dexterity;
   }
 
-  set dexterity(value: number) {
-    this._dexterity = value;
+  public static createdRacesInstances(): number {
+    throw new Error('Not implemented');
   }
-  // Fazer os 2 métodos
-  // createdRacesInstances(): number {
 
-  // };
+  public abstract get maxLifePoints(): number;
 }
 
 export default Race;
