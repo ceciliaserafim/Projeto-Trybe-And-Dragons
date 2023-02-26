@@ -1,4 +1,4 @@
-type EnergyType = 'mana' | 'stamina';
+import { EnergyType } from '../Energy';
 
 abstract class Archetype {
   private _name: string; 
@@ -12,7 +12,7 @@ abstract class Archetype {
   }
 
   get name(): string {
-    return this.name;
+    return this._name;
   }
 
   get special(): number {
@@ -23,11 +23,11 @@ abstract class Archetype {
     return this._cost;
   }
 
-  public static createdArchetypeInstances(): number {
+  static createdArchetypeInstances(): number {
     throw new Error('Not implemented');
   }
 
-  public abstract energyType(): EnergyType;
+  abstract get energyType(): EnergyType;
 }
 
 export default Archetype;
